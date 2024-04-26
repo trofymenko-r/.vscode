@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+			"label": "Setup .clang-format",
+			"type": "shell",
+			"command": "ln -sf ${workspaceFolder}/.vscode/.clang-format ${workspaceFolder}/",
+            "group": { "kind": "build" }
+		},
+
+        {
+            "type": "cppbuild",
+            "label": "Build the current source [clang++, debug]",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-fcolor-diagnostics",
+                "-fansi-escape-codes",
+                "-fno-limit-debug-info",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": { "cwd": "${fileDirname}" },
+            "problemMatcher": [ "$gcc" ],
+            "detail": "compiler: /usr/bin/clang++",
+            "dependsOn": "Setup .clang-format",
+            "group": "build",
+        },
+
+        {
+			"label": "Create zip archive",
+			"type": "shell",
+			"command": "${workspaceFolder}/.vscode/archive-workspace.sh",
+			"group": { "kind": "build" }
+		},
+    ]
+}
