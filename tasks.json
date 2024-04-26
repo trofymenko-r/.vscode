@@ -2,11 +2,11 @@
     "version": "2.0.0",
     "tasks": [
         {
-			"label": "Setup .clang-format",
-			"type": "shell",
-			"command": "ln -sf ${workspaceFolder}/.vscode/.clang-format ${workspaceFolder}/",
+            "label": "Setup .clang-format",
+            "type": "shell",
+            "command": "ln -sf ${workspaceFolder}/.vscode/.clang-format ${workspaceFolder}/",
             "group": { "kind": "build" }
-		},
+        },
 
         {
             "type": "cppbuild",
@@ -29,10 +29,10 @@
         },
 
         {
-			"label": "Create zip archive",
-			"type": "shell",
-			"command": "${workspaceFolder}/.vscode/archive-workspace.sh",
-			"group": { "kind": "build" }
-		},
+            "label": "Create zip archive",
+            "type": "shell",
+            "command": "${workspaceFolder}/.vscode/archive-workspace.sh",
+            "group": { "kind": "build" }
+        },
     ]
 }
