@@ -13,7 +13,12 @@ fi
 
 mkdir "$name"
 cd "$name" || exit 1
-echo "#include <iostream>
+echo "/*
+ * $name
+ * Provide some description here
+ */
+
+#include <iostream>
 
 using namespace std;
 
