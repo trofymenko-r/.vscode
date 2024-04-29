@@ -21,3 +21,5 @@ int main() {
   cout << \"Hello word\" << endl;
   return 0;
 }" > "$name.cpp"
+
+echo "a new source $(realpath "$name.cpp") was created from template"
