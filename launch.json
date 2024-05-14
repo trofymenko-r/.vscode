@@ -1,10 +1,10 @@
 {
     "configurations": [
         {
-            "name": "C/C++: g++ build and debug active file",
+            "name": "C/C++: g++ build and debug current project",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "program": "${fileDirname}/${relativeFileDirname}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -18,7 +18,7 @@
                   "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "Build the current source [clang++, debug]",
+            "preLaunchTask": "Build current project [clang++, debug]",
             "miDebuggerPath": "/usr/bin/gdb"
         }
     ],
