@@ -50,5 +50,6 @@
     "editor.rulers": [80],
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "C_Cpp.default.cppStandard": "c++17"
 }

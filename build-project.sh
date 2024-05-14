@@ -23,4 +23,5 @@ if [[ -z "$sources" ]]; then
 fi
 
 opts="-fcolor-diagnostics -fansi-escape-codes -fno-limit-debug-info -g"
+opts+=" -std=c++17"
 clang++ $opts $sources -o $name
